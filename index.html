@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>第 01 期 · 吉斯蒙达 · 一天一张</title>
+<style>
+  :root{
+    --paper:#f6f3ec; --ink:#1a1815; --soft:#6b6560; --line:#ded7ca; --accent:#8a3b2e;
+    --serif:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --paper:#141311; --ink:#ece6dc; --soft:#a09890; --line:#332f2a; --accent:#d98b6a; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); font-size:17px; line-height:1.85;
+    padding:0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:640px; margin:0 auto; padding:0 22px}
+
+  header{padding:34px 0 18px; display:flex; align-items:baseline; justify-content:space-between; gap:12px}
+  .brand{font-size:13px; letter-spacing:.22em; color:var(--soft)}
+  .issue{font-size:12px; color:var(--soft); letter-spacing:.1em}
+
+  h1{
+    font-family:var(--serif); font-weight:600; margin:18px 0 6px;
+    font-size:clamp(30px,9vw,42px); line-height:1.25; letter-spacing:.01em;
+  }
+  .meta{font-size:14px; color:var(--soft); letter-spacing:.03em; margin-bottom:22px}
+  .meta b{font-weight:600; color:var(--ink)}
+
+  figure{margin:0 0 26px}
+  figure img{width:100%; height:auto; display:block; border-radius:3px; box-shadow:0 12px 32px rgba(0,0,0,.16)}
+  figcaption{font-size:12.5px; color:var(--soft); margin-top:10px; line-height:1.6}
+
+  .lead{font-family:var(--serif); font-size:19px; line-height:1.9; margin:0 0 30px; color:var(--ink)}
+  .lead::first-letter{font-size:1.02em}
+
+  h2{
+    font-family:var(--sans); font-size:12.5px; letter-spacing:.2em; color:var(--accent);
+    margin:38px 0 14px; font-weight:600;
+  }
+  p{margin:0 0 16px}
+
+  ol.points{list-style:none; margin:0; padding:0; counter-reset:n}
+  ol.points li{position:relative; padding-left:34px; margin-bottom:20px; counter-increment:n}
+  ol.points li::before{
+    content:counter(n); position:absolute; left:0; top:.35em;
+    font-family:var(--serif); font-size:13px; color:var(--accent);
+    width:22px; height:22px; line-height:22px; text-align:center;
+    border:1px solid var(--line); border-radius:50%;
+  }
+  ol.points b{font-weight:600}
+
+  .rule{
+    border-left:2px solid var(--accent); padding:4px 0 4px 18px; margin:30px 0;
+    font-family:var(--serif); font-size:20px; line-height:1.75;
+  }
+
+  .do{background:rgba(138,59,46,.06); border-radius:4px; padding:18px 20px; margin:0 0 8px}
+  @media (prefers-color-scheme: dark){ .do{background:rgba(217,139,106,.09)} }
+  .do p:last-child{margin-bottom:0}
+
+  hr{border:0; border-top:1px solid var(--line); margin:40px 0 22px}
+  footer{font-size:12.5px; color:var(--soft); line-height:1.75; padding-bottom:46px}
+  footer a{color:inherit; text-decoration:underline; text-underline-offset:2px}
+  .next{margin-top:26px; font-size:13px; color:var(--soft); letter-spacing:.06em}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">一天一张</div>
+    <div class="issue">第 01 期</div>
+  </header>
+
+  <h1>吉斯蒙达</h1>
+  <div class="meta"><b>阿尔丰斯·穆夏</b> · 1894 · 石版印刷 · 两米多高，不到一米宽</div>
+
+  <figure>
+    <img src="poster.jpg" alt="穆夏 1894 年为《吉斯蒙达》设计的海报，莎拉·伯恩哈特身着拜占庭式长袍" width="1164" height="1600">
+    <figcaption>《Gismonda》，1894。穆夏为莎拉·伯恩哈特的舞台剧做的宣传海报。</figcaption>
+  </figure>
+
+  <p class="lead">1894 年冬天，巴黎的一张街头海报，让一个靠画插图接零活的捷克人，一夜之间被全城记住。</p>
+
+  <h2>先看它是怎么站住的</h2>
+  <ol class="points">
+    <li><b>画幅先定，人物后放。</b>巴黎的广告柱是圆的，窄长条才贴得满。他先接受“两米多高、不到一米宽”这个框，再往里放人。</li>
+    <li><b>一条脊线贯到底。</b>头饰、脸、手、裙摆连成一条竖线，从上往下没有岔路。你第一眼看脸，第二眼顺着裙摆往下走。</li>
+    <li><b>疏密分三段。</b>上三分之一只有头饰和空白，中间最密，下三分之一是裙摆和空白。最密的地方，正好是她的脸。</li>
+    <li><b>装饰退到边上。</b>光环、发丝、植物纹样全贴着边缘走，压在暗色里，像画框，不跟人抢。</li>
+  </ol>
+
+  <h2>带走一条</h2>
+  <div class="rule">先定画幅，再定构图。</div>
+  <p>穆夏并不是先画好人，再想办法排版。他是先知道这张东西会贴在什么位置、有多窄，然后让人物、文字、花纹都按这个窄长条去长。</p>
+
+  <h2>今天的动作</h2>
+  <div class="do">
+    <p>打开你正在做的那张封面或海报，先把 9:16 的框画出来，再往里放东西。</p>
+    <p>放不进去的，就是该删的。</p>
+  </div>
+
+  <hr>
+  <footer>
+    <p>图片来源：Wikimedia Commons，公有领域（Public domain）。作者 Alfons Mucha，1894。</p>
+    <p>这是「一天一张」的试读页：一张作品、一个判断、一条能带走的规则。不做赏析，只练习看。</p>
+    <div class="next">明天 · 一张没有主角的海报</div>
+  </footer>
+
+</div>
+</body>
+</html>
