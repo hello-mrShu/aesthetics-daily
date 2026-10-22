@@ -20,59 +20,51 @@
   html{-webkit-text-size-adjust:100%}
   body{
     margin:0; background:var(--paper); color:var(--ink);
-    font-family:var(--sans); font-size:17px; line-height:1.85;
+    font-family:var(--sans); font-size:17px; line-height:1.9;
     padding:0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:640px; margin:0 auto; padding:0 22px}
+  .wrap{max-width:660px; margin:0 auto; padding:0 20px}
 
-  header{padding:34px 0 18px; display:flex; align-items:baseline; justify-content:space-between; gap:12px}
-  .brand{font-size:13px; letter-spacing:.22em; color:var(--soft)}
+  header{padding:32px 0 10px; display:flex; align-items:baseline; justify-content:space-between; gap:12px}
+  .brand{font-size:12.5px; letter-spacing:.24em; color:var(--soft)}
   .issue{font-size:12px; color:var(--soft); letter-spacing:.1em}
 
-  h1{
-    font-family:var(--serif); font-weight:600; margin:18px 0 6px;
-    font-size:clamp(30px,9vw,42px); line-height:1.25; letter-spacing:.01em;
+  h1{font-family:var(--serif); font-weight:600; margin:16px 0 6px;
+     font-size:clamp(32px,10vw,46px); line-height:1.2; letter-spacing:.02em}
+  .meta{font-size:13.5px; color:var(--soft); letter-spacing:.02em; margin-bottom:24px; line-height:1.7}
+
+  figure{margin:0 0 10px}
+  figure img{width:100%; height:auto; display:block; border-radius:2px; box-shadow:0 14px 38px rgba(0,0,0,.18)}
+  figcaption{font-size:12.5px; color:var(--soft); margin-top:10px; line-height:1.65}
+  .detail{margin:26px 0 30px}
+  .detail img{width:100%; height:auto; display:block; border-radius:2px}
+  .detail figcaption{margin-top:9px}
+
+  .lead{font-family:var(--serif); font-size:19.5px; line-height:1.95; margin:26px 0 8px}
+
+  h2{font-size:12.5px; letter-spacing:.22em; color:var(--accent); margin:44px 0 6px; font-weight:600}
+  h2 + .sub{font-size:13px; color:var(--soft); margin:0 0 20px; letter-spacing:.02em}
+
+  .point{margin:0 0 26px}
+  .point h3{
+    font-family:var(--serif); font-size:21px; font-weight:600; line-height:1.5;
+    margin:0 0 8px; letter-spacing:.01em;
   }
-  .meta{font-size:14px; color:var(--soft); letter-spacing:.03em; margin-bottom:22px}
-  .meta b{font-weight:600; color:var(--ink)}
+  .point p{margin:0 0 12px}
+  .k{color:var(--accent)}
 
-  figure{margin:0 0 26px}
-  figure img{width:100%; height:auto; display:block; border-radius:3px; box-shadow:0 12px 32px rgba(0,0,0,.16)}
-  figcaption{font-size:12.5px; color:var(--soft); margin-top:10px; line-height:1.6}
+  hr{border:0; border-top:1px solid var(--line); margin:44px 0 26px}
+  .story p{margin:0 0 14px}
+  .story p:last-child{margin-bottom:0}
 
-  .lead{font-family:var(--serif); font-size:19px; line-height:1.9; margin:0 0 30px; color:var(--ink)}
-  .lead::first-letter{font-size:1.02em}
-
-  h2{
-    font-family:var(--sans); font-size:12.5px; letter-spacing:.2em; color:var(--accent);
-    margin:38px 0 14px; font-weight:600;
-  }
-  p{margin:0 0 16px}
-
-  ol.points{list-style:none; margin:0; padding:0; counter-reset:n}
-  ol.points li{position:relative; padding-left:34px; margin-bottom:20px; counter-increment:n}
-  ol.points li::before{
-    content:counter(n); position:absolute; left:0; top:.35em;
-    font-family:var(--serif); font-size:13px; color:var(--accent);
-    width:22px; height:22px; line-height:22px; text-align:center;
-    border:1px solid var(--line); border-radius:50%;
-  }
-  ol.points b{font-weight:600}
-
-  .rule{
-    border-left:2px solid var(--accent); padding:4px 0 4px 18px; margin:30px 0;
-    font-family:var(--serif); font-size:20px; line-height:1.75;
+  .coda{
+    border-left:2px solid var(--accent); padding:2px 0 2px 18px; margin:34px 0 10px;
+    font-family:var(--serif); font-size:19.5px; line-height:1.8;
   }
 
-  .do{background:rgba(138,59,46,.06); border-radius:4px; padding:18px 20px; margin:0 0 8px}
-  @media (prefers-color-scheme: dark){ .do{background:rgba(217,139,106,.09)} }
-  .do p:last-child{margin-bottom:0}
-
-  hr{border:0; border-top:1px solid var(--line); margin:40px 0 22px}
-  footer{font-size:12.5px; color:var(--soft); line-height:1.75; padding-bottom:46px}
-  footer a{color:inherit; text-decoration:underline; text-underline-offset:2px}
-  .next{margin-top:26px; font-size:13px; color:var(--soft); letter-spacing:.06em}
+  footer{font-size:12.5px; color:var(--soft); line-height:1.8; padding:8px 0 52px}
+  footer a{color:inherit; text-underline-offset:2px}
 </style>
 </head>
 <body>
@@ -84,38 +76,84 @@
   </header>
 
   <h1>吉斯蒙达</h1>
-  <div class="meta"><b>阿尔丰斯·穆夏</b> · 1894 · 石版印刷 · 两米多高，不到一米宽</div>
+  <div class="meta">阿尔丰斯·穆夏 · 1894 · 彩色石版印刷 · 216 × 74 cm<br>为莎拉·伯恩哈特的舞台剧《Gismonda》所作</div>
+
+  <p class="lead">1894 年 12 月，巴黎。一个 34 岁、靠画插图糊口的捷克人，在印刷厂替人救了一张海报的急。海报贴出去以后，有人半夜带着刀，把它从广告柱上割下来带走。</p>
 
   <figure>
-    <img src="poster.jpg" alt="穆夏 1894 年为《吉斯蒙达》设计的海报，莎拉·伯恩哈特身着拜占庭式长袍" width="1164" height="1600">
-    <figcaption>《Gismonda》，1894。穆夏为莎拉·伯恩哈特的舞台剧做的宣传海报。</figcaption>
+    <img src="poster.jpg" alt="穆夏 1894 年《吉斯蒙达》海报：莎拉·伯恩哈特身着拜占庭长袍，手执棕榈枝" width="1600" height="4406">
+    <figcaption>《Gismonda》，1894。布拉格装饰艺术博物馆藏。</figcaption>
   </figure>
 
-  <p class="lead">1894 年冬天，巴黎的一张街头海报，让一个靠画插图接零活的捷克人，一夜之间被全城记住。</p>
+  <h2>它为什么厉害</h2>
+  <div class="sub">不讲排版技巧，只讲它到底做对了什么。</div>
 
-  <h2>先看它是怎么站住的</h2>
-  <ol class="points">
-    <li><b>画幅先定，人物后放。</b>巴黎的广告柱是圆的，窄长条才贴得满。他先接受“两米多高、不到一米宽”这个框，再往里放人。</li>
-    <li><b>一条脊线贯到底。</b>头饰、脸、手、裙摆连成一条竖线，从上往下没有岔路。你第一眼看脸，第二眼顺着裙摆往下走。</li>
-    <li><b>疏密分三段。</b>上三分之一只有头饰和空白，中间最密，下三分之一是裙摆和空白。最密的地方，正好是她的脸。</li>
-    <li><b>装饰退到边上。</b>光环、发丝、植物纹样全贴着边缘走，压在暗色里，像画框，不跟人抢。</li>
-  </ol>
+  <div class="point">
+    <h3>一、她把广告做成了圣像</h3>
+    <p>看这个人的站法：正面、直立、下巴微抬、单手执棕榈枝。这不是舞台剧照的姿势，是<span class="k">拜占庭圣像画</span>的站姿——教堂里那些圣徒就是这样站着的，正面朝着你，不动，也不看镜头。</p>
+    <p>棕榈枝在基督教图像里是殉道与胜利的标记。穆夏把它交到一位剧院女演员手里，等于把“看戏”抬成了“朝圣”。在那个年代，广告是廉价的；他让广告有了庄严感。</p>
+  </div>
 
-  <h2>带走一条</h2>
-  <div class="rule">先定画幅，再定构图。</div>
-  <p>穆夏并不是先画好人，再想办法排版。他是先知道这张东西会贴在什么位置、有多窄，然后让人物、文字、花纹都按这个窄长条去长。</p>
+  <div class="point">
+    <h3>二、名字变成了光环</h3>
+    <p>看她头顶：<span class="k">BERNHARDT</span> 沿着拱形排开，拱顶正好落在她脑后，形成一个光环。这不是巧思，是构图——人物、文字、建筑拱券三者共用同一条弧线。</p>
+    <p>以前的海报，字是字，画是画，字贴在上头或下头。穆夏把名字变成人物的一部分，让观众先看见“她”，再意识到那是“她的名字”。后来的新艺术运动海报，这一手被抄了几十年。</p>
+  </div>
 
-  <h2>今天的动作</h2>
-  <div class="do">
-    <p>打开你正在做的那张封面或海报，先把 9:16 的框画出来，再往里放东西。</p>
-    <p>放不进去的，就是该删的。</p>
+  <div class="point">
+    <h3>三、远看是一个形，近看是一堆纹</h3>
+    <p>石版印刷套不了太多颜色，穆夏干脆放弃体积：形体压成<span class="k">轮廓线 + 平涂色块</span>。所以你退后一步，看到的是一根金绿色的竖条、一张脸；走近了，袍子上全是鸟、花、藤蔓和几何纹。</p>
+    <p>这种“两层阅读”，是穆夏的签名手法。远看抓人，近看留人。</p>
+  </div>
+
+  <figure class="detail">
+    <img src="detail-face.jpg" alt="面部与花冠细部" width="1200" height="1250" loading="lazy">
+    <figcaption>细看：脸和花冠没有渐变，全靠深蓝的轮廓线把形体从背景里“切”出来。背景的拱顶是马赛克拼贴的画法——他在模仿拜占庭教堂的墙面。</figcaption>
+  </figure>
+
+  <div class="point">
+    <h3>四、下半身是故意“化”掉的</h3>
+    <p>看裙摆：到膝盖以下，人物的体积消失了，衣褶变成纯粹的装饰图案，最后平滑地过渡到剧院名。这不是画不完，是装饰艺术的处理——它让你从“看一个人”不知不觉滑到“读一行字”，中间没有断点。</p>
+  </div>
+
+  <figure class="detail">
+    <img src="detail-dress.jpg" alt="裙摆纹样细部" width="1100" height="1200" loading="lazy">
+    <figcaption>细看：裙面上的鸟兽和花草，是石版一色一色套出来的。它们不是随便填的，密度跟着衣褶走——褶子密的地方，纹样也密。</figcaption>
+  </figure>
+
+  <div class="point">
+    <h3>五、颜色是克制出来的贵</h3>
+    <p>粉、金、橄榄绿、灰蓝，全是低饱和。同时代的谢雷（Chéret）海报是大红大绿、锣鼓喧天，招的是路人的眼睛；穆夏这张是冷金调，安静，反而显得贵。</p>
+    <p>他要卖的不是“快来看”，是“这戏高级”。这两种广告，到今天还是两条路。</p>
+  </div>
+
+  <div class="point">
+    <h3>六、字本身就是设计</h3>
+    <p>顶上的 <span class="k">GISMONDA</span> 不是拿现成字体排的。字母被拉长、压扁，笔画和背景的马赛克砖缝同宽，像从墙里长出来。<span class="k">字的形状服从画面的肌理</span>，这在 1894 年是新的。</p>
+  </div>
+
+  <figure class="detail">
+    <img src="detail-type.jpg" alt="GISMONDA 标题字样细部" width="1880" height="430" loading="lazy">
+    <figcaption>细看：字母内部的砖块纹理，是印上去的，不是纸的纹路。穆夏把“字”当成一块马赛克墙来画。</figcaption>
+  </figure>
+
+  <h2>背景</h2>
+  <div class="story">
+    <p>莎拉·伯恩哈特是当时巴黎最有名的女演员，自己经营文艺复兴剧院。1894 年底她要上新戏《吉斯蒙达》，海报还没着落，年末印刷厂放假，画家也找不到。</p>
+    <p>穆夏那几天正好在 Lemercier 印刷厂校一张插图的稿子，被叫去救场。他一个星期画完了这张两米多高的海报。</p>
+    <p>伯恩哈特看完，直接跟他签了六年合约——海报、服装、舞台布景，全归他。一个接零活的插画师，从此有了固定的饭碗。</p>
+    <p>海报贴上墙之后，据穆夏的传记记载，收藏的人半夜带着刀把海报从广告柱上割下来；还有人塞钱给贴海报的工人，让他们别刷浆糊，留一张完整的。</p>
+    <p>这一年，他 34 岁。这张海报后来成了新艺术运动（Art Nouveau）最有名的作品之一。</p>
+  </div>
+
+  <div class="coda">
+    它真正厉害的地方，不是画得细。是它换了一个问题：以前的海报问“怎么让人看清字”，穆夏问“怎么让人抬头”。
   </div>
 
   <hr>
   <footer>
-    <p>图片来源：Wikimedia Commons，公有领域（Public domain）。作者 Alfons Mucha，1894。</p>
-    <p>这是「一天一张」的试读页：一张作品、一个判断、一条能带走的规则。不做赏析，只练习看。</p>
-    <div class="next">明天 · 一张没有主角的海报</div>
+    <p>图片来源：Wikimedia Commons，公有领域。原件藏于布拉格装饰艺术博物馆（Uměleckoprůmyslové museum v Praze）。</p>
+    <p>「一天一张」试读页：一张作品，一篇解析，讲清楚它到底好在哪。</p>
   </footer>
 
 </div>
